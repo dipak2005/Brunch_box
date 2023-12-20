@@ -18,27 +18,24 @@ class _TotallistState extends State<Totallist> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff1E1D1D),
-      appBar: AppBar(
-        backgroundColor: Color(0xff1E1D1D),
-        leading: Back(),
-        actions:  [
-        Cartbutton()
-        ],
-        title: FittedBox(
-          fit: BoxFit.cover,
-          child: Text(
-            "Food Menu",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: MediaQuery.devicePixelRatioOf(context) * 8.6,
-                fontWeight: FontWeight.w700),
-          ),
-        ),
-        centerTitle: true,
-      ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.04,
+            ),
+            FittedBox(
+              fit: BoxFit.cover,
+              child: Text(
+                "Food Menu",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: MediaQuery.devicePixelRatioOf(context) * 7.5,
+                    fontWeight: FontWeight.w700),
+              ),
+            ),
+
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.87,
               child: GridView.builder(

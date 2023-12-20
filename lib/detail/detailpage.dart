@@ -33,18 +33,24 @@ class _DetailpageState extends State<Detailpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff1E1D1D),
-      appBar: AppBar(
-        backgroundColor: Color(0xff1E1D1D),
-        leading:Back(),
-        actions:  [
-          Cartbutton(),
-        ],
-      ),
       body: SingleChildScrollView(
         child: Column(
           // mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.04,
+            ),
+            FittedBox(
+              fit: BoxFit.cover,
+              child: Text(
+                "Details",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: MediaQuery.devicePixelRatioOf(context) * 7.5,
+                    fontWeight: FontWeight.w700),
+              ),
+            ),
             SizedBox(
               height: MediaQuery.sizeOf(context).height * 0.04,
             ),
@@ -177,8 +183,7 @@ class _DetailpageState extends State<Detailpage> {
                                 "${widget.map?["product".toString()] ?? 0}",
                                 style: TextStyle(
                                     color: Colors.black,
-                                    fontSize:
-                                       17,
+                                    fontSize: 17,
                                     fontWeight: FontWeight.w700),
                               ),
                             ),

@@ -45,27 +45,24 @@ class _FruiteState extends State<Fruite> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xff1E1D1D),
-      appBar: AppBar(
-        backgroundColor: Color(0xff1E1D1D),
-        leading: Back(),
-        actions:  [
-          Cartbutton(),
-        ],
-        title: FittedBox(
-          fit: BoxFit.cover,
-          child: Text(
-            "Fresh Fruites",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: MediaQuery.devicePixelRatioOf(context) * 7.5,
-                fontWeight: FontWeight.w700),
-          ),
-        ),
-        centerTitle: true,
-      ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.04,
+            ),
+            FittedBox(
+              fit: BoxFit.cover,
+              child: Text(
+                "Fruites",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: MediaQuery.devicePixelRatioOf(context) * 7.5,
+                    fontWeight: FontWeight.w700),
+              ),
+            ),
+
             Padding(
               padding:
                   EdgeInsets.all(MediaQuery.devicePixelRatioOf(context) * 2.8),
